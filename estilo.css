@@ -1,0 +1,98 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    min-height: 100vh;
+    background-color: #ffdfa4;
+    height: 100vh;  
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;  
+    padding-bottom: 70px;   
+}
+
+.inputs {
+    display: flex; 
+    flex-wrap: wrap;
+    justify-content: center; 
+    align-items: center; 
+    gap: 8px; 
+    margin: 10px 0;
+}
+
+#add, #Limpar, #data, #digite {
+    padding: 8px;
+    margin: 8px;
+    border-radius: 8px;
+    font-size: 15px;
+}
+
+#add {
+    background-color: #ffffff;
+    border: 0.5px solid #ffffff;
+    cursor: pointer;
+    color:#636363;
+    width: 80px;
+}
+
+#data {
+    width: 130px;
+    max-width: 130px;
+    border: none;
+    color: #7c7c7c;
+    cursor: pointer;
+}
+
+#digite {
+    width: 100%;
+    max-width: 400px;
+    border: none;
+    flex: 1;
+    min-width: 220px;
+}
+
+#Limpar {
+    background-color: #a5653bc7;
+    border: none;
+    cursor: pointer;
+    color:#fafafa;
+}
+
+.item-tarefa {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; 
+    padding: 6px 8px;
+    border-bottom: 1px solid #ccc;
+    font-size: 16px;
+}
+
+.item-tarefa input[type="checkbox"] {
+    transform: scale(1.3);
+    margin-left: 12px;
+    cursor: pointer;
+}
+
+.itensDaLista {
+    width: 100%;
+    max-width: 500px;
+    margin-top: 20px;
+    color:#fafafa;
+    background-color: #a5653bc7;
+    border-radius: 8px;
+}
+
+footer {
+    width: 100%;
+    background-color: #a5653bc7;
+    position: fixed; 
+    bottom: 0; 
+    left: 0;
+}
+
+footer p {
+    font-size: 15px;
+    color: #fafafa;
+    text-align: center;
+    margin-top: 20px;
+}
