@@ -1,32 +1,33 @@
-document.getElementById("add").addEventListener("click", function () {
-  const input = document.getElementById("digite");
-  const valorInput = input.value.trim();
+//evento de clique no botão "Adicionar"
+document.getElementById('adicionar').addEventListener('click', function() {
+    const input = document.getElementById('digite');
+    const valorInput = input.value.trim();
 
-  if (valorInput) {
-    const itemLista = document.createElement("li");
-    itemLista.className = "item-tarefa";
-    const spanTexto = document.createElement("span");
-    spanTexto.textContent = valorInput;
+    if (valorInput) {
+        const itemLista = document.createElement("li"); // cria tag li
+        itemLista.className = "item-tarefa"; // classe para estilizar
 
-    const checkbox = document.createElement("input");
-    checkbox.type = "checkbox";
+        const spanTexto = document.createElement("span"); // cria o texto da tarefa
+        spanTexto.textContent = valorInput;
 
-    //popup
-    checkbox.addEventListener("change", function () {
-      if (checkbox.checked) {
-        alert("Parabéns!");
-      }
-    });
+        const checkbox = document.createElement("input");
+        checkbox.type = "checkbox";
 
-    itemLista.appendChild(spanTexto);
-    itemLista.appendChild(checkbox);
+        // evento que mostra o popup ao marcar o checkbox
+        checkbox.addEventListener('change', function() {
+            if (checkbox.checked) {
+                alert("Parabéns!");
+            }
+        });
 
-    document.getElementById("listaTarefas").appendChild(itemLista);
-    input.value = "";
-  }
+        itemLista.appendChild(spanTexto);   // adiciona texto
+        itemLista.appendChild(checkbox);    // adiciona checkbox
+
+        document.getElementById("listaTarefas").appendChild(itemLista);
+        input.value = '';
+    }
 });
 
-//limpa a lista
-document.getElementById("Limpar").addEventListener("click", function () {
-  document.getElementById("listaTarefas").innerHTML = "";
+document.getElementById('Limpar').addEventListener('click', function() {
+    document.getElementById('listaTarefas').innerHTML = ''; //limpa a lista inteira
 });
